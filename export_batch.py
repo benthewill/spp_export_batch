@@ -9,6 +9,9 @@ import substance_painter.textureset
 import substance_painter.display
 import substance_painter_plugins
 
+# Change work_dir to the folder with your .spp files
+work_dir = r"C:\Users\berna\OneDrive\Documents\test_export"
+
 
 def all_export_presets():
     starter_export_presets = os.listdir(sys.path[0] + r"\resources\starter_assets\export-presets")
@@ -52,8 +55,6 @@ def all_export_presets():
 
 
 def start_plugin():
-    work_dir = r"C:\Users\berna\OneDrive\Documents\test_export"
-
     work_dir_list = os.listdir(work_dir)
     all_projects = []
     for x in work_dir_list:
