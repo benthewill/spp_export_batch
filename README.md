@@ -10,6 +10,7 @@ Substance Painter - Batch Exporter is a plugin for Adobe Substance Painter 3D fo
    - If you can't find it, open Substance Painter and select the _Python_ menu in the toolbar and click the _Plugins Folder_.
 3. Open the `export_batch.py` file with your preferred Text Editor/IDE.
 4. Change the `work_dir` variable to the directory where your `*.spp` files live.
+5. Change the export preset name and context accordingly. If it's a built-in preset, use `"starter_assets"` for the context. Otherwise, use `"your_assets"`
 5. Open Substance Painter.
 6. The plugin `export_batch` should be listed in the _Python_ menu. If not, select the _Reload Plugins Folder_.
 7. Run the plugin.

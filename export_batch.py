@@ -12,6 +12,10 @@ import substance_painter_plugins
 # Change work_dir to the folder with your .spp files
 work_dir = r"C:\Users\berna\OneDrive\Documents\test_export"
 
+# Change the export preset name accordingly. If it's a built-in preset, use "starter_assets" for the context. Otherwise, use "your_assets"
+export_preset_name = "UE5"
+export_preset_context = "your_assets"
+
 
 def all_export_presets():
     starter_export_presets = os.listdir(sys.path[0] + r"\resources\starter_assets\export-presets")
@@ -72,7 +76,7 @@ def start_plugin():
         substance_painter.project.open(current_project)
 
         export_preset = substance_painter.resource.ResourceID(
-            context="your_assets", name="UE5")
+            context=export_preset_context, name=export_preset_name)
 
         all_texture_sets = []
         for texture_set in substance_painter.textureset.all_texture_sets():
